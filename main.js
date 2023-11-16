@@ -29,8 +29,7 @@ const logElements = (array) => {
 logElements(array);*/
 
 /*3. Scrivi una funzione chiamata divide che prende due parametri, dividendo e divisore. Se il divisore è 0, genera un nuovo errore con 
-il messaggio "Impossibile dividere per zero". Altrimenti, restituisci il risultato della divisione.*/
-const divide = (dividendo, divisore) => {
+il messaggio "Impossibile dividere per zero". Altrimenti, restituisci il risultato della divisione.
   if (divisore === 0) {
     throw new Error("Impossibile dividere per zero");
   }
@@ -40,4 +39,17 @@ try {
   console.log(divide(10, 0));
 } catch (error) {
   console.error(error);
-}
+}*/
+
+/*4. Scrivi una funzione processNumbers che prende un array, convalida che contenga solo numeri e restituisce un nuovo array con ogni numero elevato al quadrato. 
+Se un elemento dell'array non è un numero, genera un errore indicando a quale indice si trova il valore non numerico.*/
+
+const processNumbers = (array) => {
+  let risultato = array.map((elem, i) => {
+    if (typeof elem !== "number") {
+      throw new Error(`L'elemento con indice ${i} non è un numero `);
+    }
+    return elem * elem;
+  });
+  return risultato;
+};
