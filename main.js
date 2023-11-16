@@ -16,7 +16,7 @@ const safeParseJSON = (stringa) => {
 
 //safeParseJSON(stringa);//
 
-/* 2. Crea una funzione chiamata logElements che prende un array e stampa in console ogni elemento utilizzando il metodo .forEach().*/
+/* 2. Crea una funzione chiamata logElements che prende un array e stampa in console ogni elemento utilizzando il metodo .forEach().
 
 const array = [1, 2, 3, 4, 5];
 
@@ -26,4 +26,18 @@ const logElements = (array) => {
   });
 };
 
-logElements(array);
+logElements(array);*/
+
+/*3. Scrivi una funzione chiamata divide che prende due parametri, dividendo e divisore. Se il divisore è 0, genera un nuovo errore con 
+il messaggio "Impossibile dividere per zero". Altrimenti, restituisci il risultato della divisione.*/
+const divide = (dividendo, divisore) => {
+  if (divisore === 0) {
+    throw new Error("Impossibile dividere per zero");
+  }
+  return dividendo / divisore;
+};
+try {
+  console.log(divide(10, 0));
+} catch (error) {
+  console.error(error);
+}
